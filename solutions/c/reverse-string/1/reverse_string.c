@@ -1,0 +1,29 @@
+#include "reverse_string.h"
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+char *reverse(const char *value){
+
+    int i = 0;
+
+    char *reverse;
+    reverse = malloc(strlen(value) + 1);
+    printf("Original: %s\n", value);
+
+
+    while (i < strlen(value)){
+        reverse[i] = value[strlen(value) - 1- i];
+        i++;
+    }
+    i = strlen(value);
+    reverse[i] = '\0';
+    printf("Reversed: %s\n", reverse);
+    return reverse;
+}
+
+// int main(void){
+//     char *sentence = "desserts";
+//     reverse(sentence);
+//     return 0;
+// }
